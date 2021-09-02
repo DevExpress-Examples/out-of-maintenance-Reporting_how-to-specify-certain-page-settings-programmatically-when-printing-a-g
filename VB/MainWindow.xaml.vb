@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Windows
@@ -9,6 +8,7 @@ Imports DevExpress.Xpf.Printing
 Namespace WpfPrintGridPageSettings
 	Partial Public Class MainWindow
 		Inherits DXWindow
+
 		Public Sub New()
 			InitializeComponent()
 		End Sub
@@ -31,6 +31,7 @@ Namespace WpfPrintGridPageSettings
 	#Region "Data for the Grid"
 	Public Class TabletDataSet
 		Inherits DataSet
+
 		Private Const m_columns As Integer = 10
 		Private Const m_rows As Integer = 10
 
@@ -65,14 +66,14 @@ Namespace WpfPrintGridPageSettings
 		End Function
 
 		#Region "Disable Serialization for Tables and Relations"
-		<DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)> _
+		<DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
 		Public Shadows ReadOnly Property Tables() As DataTableCollection
 			Get
 				Return MyBase.Tables
 			End Get
 		End Property
 
-		<DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)> _
+		<DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
 		Public Shadows ReadOnly Property Relations() As DataRelationCollection
 			Get
 				Return MyBase.Relations
