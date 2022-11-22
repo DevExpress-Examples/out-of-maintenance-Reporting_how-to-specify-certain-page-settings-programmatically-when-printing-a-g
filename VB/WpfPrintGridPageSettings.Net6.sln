@@ -1,6 +1,6 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
+﻿Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 16
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPrintGridPageSettings", "WpfPrintGridPageSettings.Net5.csproj", "{F8531CF2-EB28-41BE-929E-52319A51BE9B}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WpfPrintGridPageSettings", "WpfPrintGridPageSettings.Net6.vbproj", "{F8531CF2-EB28-41BE-929E-52319A51BE9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
