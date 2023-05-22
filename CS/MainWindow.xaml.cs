@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Data;
 using System.Windows;
+using DevExpress.Drawing.Printing;
 using DevExpress.Xpf.Core;
 using DevExpress.Xpf.Printing;
 
@@ -24,7 +25,7 @@ namespace WpfPrintGridPageSettings
         {
             PrintableControlLink link = new PrintableControlLink((DevExpress.Xpf.Grid.TableView)gridControl1.View, "My Document");
 
-            link.PaperKind = System.Drawing.Printing.PaperKind.A5;
+            link.PaperKind = DXPaperKind.A5;
             link.Landscape = true;
 
             link.ShowPrintPreviewDialog(this);
