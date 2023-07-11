@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Data;
 using System.Windows;
-using DevExpress.Drawing.Printing;
 using DevExpress.Xpf.Core;
 using DevExpress.Xpf.Printing;
 
@@ -25,14 +24,13 @@ namespace WpfPrintGridPageSettings
         {
             PrintableControlLink link = new PrintableControlLink((DevExpress.Xpf.Grid.TableView)gridControl1.View, "My Document");
 
-            link.PaperKind = DXPaperKind.A5;
+            link.PaperKind = System.Drawing.Printing.PaperKind.A5;
             link.Landscape = true;
 
             link.ShowPrintPreviewDialog(this);
         }
     }
 
-    #region Data for the Grid
     public class TabletDataSet : DataSet
     {
         private const int m_columns = 10;
@@ -73,7 +71,6 @@ namespace WpfPrintGridPageSettings
             return ds;
         }
 
-        #region Disable Serialization for Tables and Relations
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new DataTableCollection Tables
         {
@@ -85,8 +82,6 @@ namespace WpfPrintGridPageSettings
         {
             get { return base.Relations; }
         }
-        #endregion Disable Serialization for Tables and Relations
     }
-    #endregion Data for the Grid
 
 }

@@ -1,6 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OptionInfer>On</OptionInfer>
     <TargetFramework>net6.0-windows</TargetFramework>
     <SupportedOSPlatformVersion>0.0</SupportedOSPlatformVersion>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -18,19 +17,32 @@
     <UseWPF>true</UseWPF>
     <Platforms>x86;AnyCPU</Platforms>
     <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
-    <EnableDefaultApplicationDefinition>false</EnableDefaultApplicationDefinition>
+    <DefaultItemExcludes>obj*/**</DefaultItemExcludes>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
   </PropertyGroup>
-  <ItemGroup>
-    <ApplicationDefinition Include="App.xaml" />
-  </ItemGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
   </PropertyGroup>
   <ItemGroup>
-    <AppDesigner Include="Properties\" />
+    <AppDesigner Include="My Project\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.Wpf" Version="23.1.*-*" />
-    <PackageReference Include="DevExpress.Wpf.Themes.Office2016White" Version="23.1.*-*" />
+    <PackageReference Include="DevExpress.Data" Version="23.1.*-*" />
+    <PackageReference Include="DevExpress.Data.Desktop" Version="23.1.*-*" />
+    <PackageReference Include="DevExpress.Mvvm" Version="23.1.*-*" />
+    <PackageReference Include="DevExpress.Office.Core" Version="23.1.*-*" />
+    <PackageReference Include="DevExpress.Pdf.Core" Version="23.1.*-*" />
+    <PackageReference Include="DevExpress.Printing.Core" Version="23.1.*-*" />
+    <PackageReference Include="DevExpress.RichEdit.Core" Version="23.1.*-*" />
+    <PackageReference Include="DevExpress.RichEdit.Export" Version="23.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Core" Version="23.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Grid.Core" Version="23.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Printing" Version="23.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Reporting" Version="23.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Themes.All" Version="23.1.*-*" />
   </ItemGroup>
 </Project>
